@@ -591,7 +591,7 @@ Transform:
   m_GameObject: {fileID: 829667432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.71, y: 0.47, z: 4.10049}
+  m_LocalPosition: {x: 1, y: 1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -702,7 +702,7 @@ Transform:
   m_GameObject: {fileID: 1017363717}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.73213995, y: 0.47, z: 4.10049}
+  m_LocalPosition: {x: -1, y: 1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -813,7 +813,7 @@ Transform:
   m_GameObject: {fileID: 1157804068}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.50786, y: 0.47, z: 4.10049}
+  m_LocalPosition: {x: 0, y: 1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   colorblindMaterial: {fileID: 2100000, guid: 0361e0b0edd4b6d46a3be56fa66a4ea5, type: 2}
-  currentColorblindness: {fileID: 11400000, guid: 5473dc1e8b54d1547a827838e4b4cfc4, type: 2}
+  currentColorblindness: {fileID: 11400000, guid: bd4f03140db93834aa6634c2a15e8ac1, type: 2}
 --- !u!4 &1821354374
 Transform:
   m_ObjectHideFlags: 0

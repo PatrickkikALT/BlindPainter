@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Colorblind
   colorMatrix:
     c0:
-      x: 0.95
-      y: 0
-      z: 0
+      x: 1.255528
+      y: -0.078411
+      z: 0.004733
     c1:
-      x: 0.05
-      y: 0.43333
-      z: 0.475
+      x: -0.076749
+      y: 0.930809
+      z: 0.691367
     c2:
-      x: 0
-      y: 0.56667
-      z: 0.525
-  name: Trtanopia
+      x: -0.178779
+      y: 0.147602
+      z: 0.3039
+  typeName: Tritanopia

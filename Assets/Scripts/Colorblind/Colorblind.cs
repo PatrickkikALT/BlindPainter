@@ -6,5 +6,5 @@ using UnityEngine;
 [Serializable]
 public class Colorblind : ScriptableObject {
   public float3x3 colorMatrix;
-  public string name;
+  public string typeName;
 }

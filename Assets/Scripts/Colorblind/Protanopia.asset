@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Colorblind
   colorMatrix:
     c0:
-      x: 0.56667
-      y: 0.55833
-      z: 0
+      x: 0.152286
+      y: 0.114503
+      z: -0.003882
     c1:
-      x: 0.43333
-      y: 0.44167
-      z: 0.24167
+      x: 1.052583
+      y: 0.786281
+      z: -0.048116
     c2:
-      x: 0
-      y: 0
-      z: 0.75833
-  name: Protanopia
+      x: -0.204868
+      y: 0.099216
+      z: 1.051998
+  typeName: Protanopia

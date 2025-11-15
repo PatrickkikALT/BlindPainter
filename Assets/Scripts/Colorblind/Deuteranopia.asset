@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Colorblind
   colorMatrix:
     c0:
-      x: 0.625
-      y: 0.7
-      z: 0
+      x: 0.367322
+      y: 0.280085
+      z: -0.01182
     c1:
-      x: 0.375
-      y: 0.3
-      z: 0.3
+      x: 0.860646
+      y: 0.672501
+      z: 0.04294
     c2:
-      x: 0
-      y: 0
-      z: 0.7
-  name: Deuteranopia
+      x: -0.227968
+      y: 0.047413
+      z: 0.968881
+  typeName: Deuteranopia
