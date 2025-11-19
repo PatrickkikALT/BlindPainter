@@ -24,26 +24,23 @@ public struct Symbol : IEquatable<Symbol> {
 public class SymbolColor : MonoBehaviour {
   private Symbol[] _symbols;
   public SpriteRenderer spriteRenderer;
+
   public void Start() {
     var c = GetComponent<Renderer>().material.color;
     _symbols = GameManager.Instance.symbols;
-    var symbol = _symbols
-      .Where(x => AreColorsSimilar(c, x.color, GameManager.Instance.symbolTolerance))
-      .OrderBy(x => ColorDifference(c, x.color))
-      .FirstOrDefault();
-
+    var symbol = FindClosestSymbol(c, GameManager.Instance.symbolTolerance);
     spriteRenderer.sprite = symbol.sprite;
   }
-  
-  Symbol FindClosestSymbol(Color target, float tolerance, int maxRetries = 3, float increment = 0.05f, int attempt = 0)
-  {
+
+  Symbol FindClosestSymbol(Color target, float tolerance, int maxRetries = 3, float increment = 0.05f,
+    int attempt = 0) {
     Symbol symbol = _symbols
       .Where(x => AreColorsSimilar(target, x.color, tolerance))
       .OrderBy(x => ColorDifference(target, x.color))
       .FirstOrDefault();
 
     if (symbol.Equals(default(Symbol)) || attempt >= maxRetries)
-      return symbol; 
+      return symbol;
 
     return FindClosestSymbol(target, tolerance + increment, maxRetries, increment, attempt + 1);
   }
@@ -60,5 +57,4 @@ public class SymbolColor : MonoBehaviour {
            Mathf.Abs(c1.g - c2.g) +
            Mathf.Abs(c1.b - c2.b);
   }
-
 }

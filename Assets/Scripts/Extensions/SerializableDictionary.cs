@@ -14,7 +14,7 @@ public class SerializableDictionary<TKey, TValue> {
   public List<SerializableKeyValuePair<TKey, TValue>> entries = new();
 }
 
-
+#if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(SerializableKeyValuePair<,>))]
 public class SerializableKeyValuePairDrawer : PropertyDrawer {
   public override void OnGUI(Rect position, SerializedProperty property, GUIContent label) {
@@ -38,3 +38,4 @@ public class SerializableKeyValuePairDrawer : PropertyDrawer {
     return EditorGUIUtility.singleLineHeight;
   }
 }
+#endif

@@ -25,4 +25,4 @@ MonoBehaviour:
       x: 0.115
       y: 0.115
       z: 0.115
-  name: Achromatopia
+  typeName: Achromatopia
