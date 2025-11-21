@@ -206,11 +206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678559393747706262, guid: a8ca47a3e35178e4cbb26da91b21b6b3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2678559393747706262, guid: a8ca47a3e35178e4cbb26da91b21b6b3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2678559393747706262, guid: a8ca47a3e35178e4cbb26da91b21b6b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5005976409364846253, guid: a8ca47a3e35178e4cbb26da91b21b6b3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 79c78f225d6833c428585682a6093693, type: 2}
     - target: {fileID: 5182047368539547845, guid: a8ca47a3e35178e4cbb26da91b21b6b3, type: 3}
       propertyPath: m_Name
       value: CADD MAP Binnen (1)
@@ -281,6 +285,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8526690935269334795, guid: eca0d64265dd6f941be1a0734326b2e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526690935269334795, guid: eca0d64265dd6f941be1a0734326b2e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526690935269334795, guid: eca0d64265dd6f941be1a0734326b2e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526690935269334795, guid: eca0d64265dd6f941be1a0734326b2e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8940276233858350892, guid: eca0d64265dd6f941be1a0734326b2e5, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met deur
@@ -320,11 +340,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59edcacb3d054eb4abed3c4afd83a3a1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59edcacb3d054eb4abed3c4afd83a3a1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 59edcacb3d054eb4abed3c4afd83a3a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -341,7 +361,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 59edcacb3d054eb4abed3c4afd83a3a1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 19c17b1840284c14a8677f20ce18d386, type: 2}
+      objectReference: {fileID: 2100000, guid: 79c78f225d6833c428585682a6093693, type: 2}
     - target: {fileID: 919132149155446097, guid: 59edcacb3d054eb4abed3c4afd83a3a1, type: 3}
       propertyPath: m_Name
       value: CADD MAP Binnen Buiten
