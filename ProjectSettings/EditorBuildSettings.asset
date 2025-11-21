@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Samples/XR Hands/1.6.1/HandVisualizer/HandVisualizer.unity
     guid: ab7acf0d9677fbe4db51bc36647d4fcb
   - enabled: 1
+    path: Assets/Scenes/Start Scene.unity
+    guid: d3eb086b02b5a5c439cc1abc2dd17e53
+  - enabled: 1
     path: Assets/Scenes/BasicScene.unity
     guid: 4e9fef26e6adb88479ad1b9834a32d94
   m_configObjects:
