@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: wall
+  m_Name: New Material
   m_Shader: {fileID: -6465566751694194690, guid: fd405174bd94f784e9a6fd027271a733, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c24d06de661e015438ccd007323248ee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -33,7 +33,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ColorMap:
-        m_Texture: {fileID: 2800000, guid: c24d06de661e015438ccd007323248ee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 612819e6d1988274492e8910b1567fb2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -60,10 +60,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _NormalFromTexture_9530b88c88624f6287761c5bc5c7f5f4_Texture_0_Texture2D:
-        m_Texture: {fileID: 2800000, guid: ac26fd4eaaedc7a4890bab47f8c01258, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: ac26fd4eaaedc7a4890bab47f8c01258, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -76,20 +72,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_233e2d04d9b444d8a7009170e2fb7034_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: ac26fd4eaaedc7a4890bab47f8c01258, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Triplanar_2d2daba9992841f3aa69eaf429fa942a_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: c24d06de661e015438ccd007323248ee, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Triplanar_55d6f3a779f74de296b712f13921326f_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: ac26fd4eaaedc7a4890bab47f8c01258, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -111,6 +95,7 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 1
     - _BlendModePreserveSpecular: 1
+    - _BlendSharpness: 6
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -125,34 +110,35 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Normal_Strength: 5
+    - _Normal_Strength: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.1
+    - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _Tiling: 0.5
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     - _tile: 0.5
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Base_Color: {r: 0.35220122, g: 0.35220122, b: 0.35220122, a: 1}
-    - _Color: {r: 0.4716981, g: 0.24325097, b: 0.01928317, a: 1}
-    - _Color1: {r: 0.4716981, g: 0.2446641, b: 0.17948255, a: 1}
+    - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.3018868, g: 0.012341229, b: 0.012341229, a: 1}
+    - _Color1: {r: 0.7106918, g: 0.03799291, b: 0.03799291, a: 1}
     - _Color2: {r: 0, g: 0, b: 0, a: 1}
     - _Color_2: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &2864026816747537653
+--- !u!114 &6993753072130611749
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

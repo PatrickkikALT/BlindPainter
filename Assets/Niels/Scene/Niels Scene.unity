@@ -649,6 +649,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Muur met deur
       objectReference: {fileID: 0}
+    - target: {fileID: 9197856487915399571, guid: 77a2943d7e456494eb069850e0fede77, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dbe86dc4eb176134fa7653f37aac8583, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
