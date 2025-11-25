@@ -37,9 +37,6 @@ public struct AverageColorJob : IJob
 
 public static class TextureExtensions {
   public static Color GetColorFromPixelData(this Material mat) {
-    if (mat.shader.name == "Shader Graphs/Wallz") {
-      return mat.GetColor("_Color1");
-    }
     if (!mat.mainTexture) {
       return mat.color;
     }
