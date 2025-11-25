@@ -1,5 +1,10 @@
+using System;
+using System.Runtime.CompilerServices;
+using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public static class ExtensionMethods {
   //unity doesnt have an implicit cast from float3 to Vector4 for SetVector so had to make my own
@@ -8,5 +13,7 @@ public static class ExtensionMethods {
     var v4 = new Vector4(v.x, v.y, v.z, 0);
     material.SetVector(name, v4);
   }
-  
+
+
+  public static int GetIndex<T>(this T[] array, T obj) => Array.IndexOf(array, obj);
 }

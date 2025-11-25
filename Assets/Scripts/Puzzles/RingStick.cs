@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -19,10 +20,10 @@ public class RingStick : MonoBehaviour {
     }
     
     positions.entries.Find(x => x == _pair).value = true;
-    obj.transform.position = transform.position + valid;
+    StartCoroutine(LerpToPos(obj.transform, transform.position + _pair.key, 0.01f));
     obj.transform.rotation = Quaternion.identity;
     rings.Add(obj.GetComponent<Ring>());
-
+    Physics.IgnoreCollision(GetComponent<Collider>(), obj.GetComponent<Collider>(), true);
     if (rings.Count > 0) {
       var amount = rings.Count(r => r.color == typeNeeded);
       var wrongAmount = rings.Count(r => r.color != typeNeeded);
@@ -34,12 +35,32 @@ public class RingStick : MonoBehaviour {
     
   }
 
+  public IEnumerator LerpToPos(Transform transform, Vector3 to, float tolerance) {
+    var rb = transform.GetComponent<Rigidbody>();
+    rb.isKinematic = true;
+    while (Vector3.Distance(transform.position, to) > tolerance) {
+      transform.position = Vector3.Slerp(transform.position, to, 2 * Time.deltaTime);
+      yield return null;
+    }
+
+    rb.isKinematic = false;
+  }
+
+
   public void RemoveRing(GameObject obj) {
+    Physics.IgnoreCollision(GetComponent<Collider>(), obj.GetComponent<Collider>(), false);
     positions.entries.Find(x => x == _pair).value = false;
     rings.Remove(obj.GetComponent<Ring>());
     if (completed) {
       completed = false;
       PuzzleManager.Instance.RemoveFinishedRing();
+    }
+  }
+
+  public void SetRingPosAfterFinish() {
+    for (int i = 0; i < rings.Count; i++) {
+      rings[i].transform.position = transform.position + positions.entries[i].key;
+      rings[i].transform.rotation = Quaternion.identity;
     }
   }
 
