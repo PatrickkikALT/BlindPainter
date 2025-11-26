@@ -142,7 +142,7 @@ Material:
     - _tile: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Base_Color: {r: 0.044025064, g: 0.044025064, b: 0.044025064, a: 1}
+    - _Base_Color: {r: 0, g: 0, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
     - _Color_2: {r: 0.36477977, g: 0.36477977, b: 0.36477977, a: 1}
