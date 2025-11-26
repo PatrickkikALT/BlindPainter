@@ -25,22 +25,20 @@ public class SymbolColor : MonoBehaviour {
     var symbol = FindClosestSymbol(c, GameManager.Instance.symbolTolerance);
     spriteRenderer.sprite = symbol.sprite;
   }
-
-
-
+  
   private Symbol FindClosestSymbol(Color target, float tolerance, int maxRetries = 3, float increment = 0.05f, int attempt = 0) {
     Symbol symbol = _symbols
       .Where(x => AreColorsSimilar(target, x.color, tolerance))
       .OrderBy(x => ColorDifference(target, x.color))
       .FirstOrDefault();
 
-    if (symbol.Equals(default) || attempt >= maxRetries)
+    if (symbol.Equals(default) || attempt >= maxRetries) {
       return symbol;
+    }
 
     return FindClosestSymbol(target, tolerance + increment, maxRetries, increment, attempt + 1);
   }
-
-
+  
   private bool AreColorsSimilar(Color c1, Color c2, float tolerance) => 
     Math.Abs(c1.r - c2.r) < tolerance &&
     Math.Abs(c1.g - c2.g) < tolerance &&

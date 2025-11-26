@@ -16,4 +16,5 @@ public static class ExtensionMethods {
 
 
   public static int GetIndex<T>(this T[] array, T obj) => Array.IndexOf(array, obj);
+  
 }

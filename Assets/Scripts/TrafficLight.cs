@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,21 @@ public class TrafficLight : MonoBehaviour {
       yield return new WaitForSeconds(green);
       SetColor(Color.orange);
       yield return new WaitForSeconds(orange);
+    }
+  }
+
+  public void OnTriggerEnter(Collider other) {
+    print("Collision with " + other.name);
+    if (other.TryGetComponent(out Car car)) {
+      car.isAtStoplight = true;
+    }
+  }
+
+  public void OnTriggerExit(Collider other) {
+    print("Collision with " + other.name + " stopped");
+    if (other.TryGetComponent(out Car car)) {
+      car.isAtStoplight = false;
+      car.currentTrafficLight = this;
     }
   }
 
