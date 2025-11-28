@@ -124,15 +124,15 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
-    - _Y_level_Influence: 0
+    - _Y_level_Influence: 1
     - _ZWrite: 1
     - _tile: 0.5
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Base_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1: {r: 0, g: 0, b: 0, a: 1}
-    - _Color_2: {r: 0, g: 0, b: 0, a: 1}
+    - _Color1: {r: 0.61635214, g: 0.31374377, b: 0.26941174, a: 1}
+    - _Color_2: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
