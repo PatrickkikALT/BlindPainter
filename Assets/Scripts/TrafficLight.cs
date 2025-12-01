@@ -1,27 +1,35 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
+public enum TrafficColor {
+  RED = 0,
+  ORANGE = 1,
+  GREEN = 2,
+}
+
 public class TrafficLight : MonoBehaviour {
-  public Material lightMaterial;
+  public Material[] lightMaterial;
   public Color currentColor;
   public bool running;
-  
-  public float red, green, orange;
+
+  private SerializableDictionary<TrafficColor, Color> _colorDict;
+  [SerializeField] private float red, green, orange;
   
   public void Start() {
+    _colorDict = StoplightManager.Instance.colorDict;
     StartCoroutine(LightPattern());
   }
 
   public IEnumerator LightPattern() {
     while (running) {
-      SetColor(Color.red);
+      SetColor(TrafficColor.RED);
       yield return new WaitForSeconds(red);
-      SetColor(Color.green);
-      currentColor = lightMaterial.GetColor("_BaseColor");
+      SetColor(TrafficColor.GREEN);
       yield return new WaitForSeconds(green);
-      SetColor(Color.orange);
+      SetColor(TrafficColor.ORANGE);
       yield return new WaitForSeconds(orange);
     }
   }
@@ -41,9 +49,16 @@ public class TrafficLight : MonoBehaviour {
     }
   }
 
-  public void SetColor(Color color) {
-    lightMaterial.SetColor("_BaseColor", color);
+  public void SetColor(TrafficColor trafficColor) {
+    var color = _colorDict.entries[(int)trafficColor].value;
+    
+    lightMaterial[(int)trafficColor].SetColor("_BaseColor", color);
     currentColor = color;
+    
+    //disable other ones
+    var toTurnOff = _colorDict.entries.Where(x => x.value != color);
+    foreach (var item in toTurnOff) {
+      lightMaterial[(int)item.key].SetColor("_BaseColor", Color.black);
+    }
   }
-
 }

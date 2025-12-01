@@ -3307,7 +3307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   colorblindMaterial: {fileID: 2100000, guid: 0361e0b0edd4b6d46a3be56fa66a4ea5, type: 2}
-  currentColorblindness: {fileID: 11400000, guid: bd4f03140db93834aa6634c2a15e8ac1, type: 2}
+  currentColorblindness: {fileID: 11400000, guid: 5473dc1e8b54d1547a827838e4b4cfc4, type: 2}
   possibleColorblindness:
   - {fileID: 11400000, guid: 5473dc1e8b54d1547a827838e4b4cfc4, type: 2}
   - {fileID: 11400000, guid: b7d0804c7be0a9c4495a2ae17dca94ce, type: 2}
