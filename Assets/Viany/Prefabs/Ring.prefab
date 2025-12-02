@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3d15ee40537667349bc121acba1f7d63, type: 2}
+  - {fileID: 2100000, guid: fc226930e8fad4c499969204cecfbc05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -271,6 +271,9 @@ MonoBehaviour:
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
   m_MaxAngularVelocityDelta: 20
+  col: {fileID: 0}
+  rb: {fileID: 0}
+  color: 0
 --- !u!65 &2201558751267016189
 BoxCollider:
   m_ObjectHideFlags: 0
