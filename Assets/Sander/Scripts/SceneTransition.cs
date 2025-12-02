@@ -4,6 +4,7 @@ public class SceneTransition : MonoBehaviour
 {
     public GameObject startMenu;
     public GameObject settingsMenu;
+    public GameObject aboutMenu;
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -17,10 +18,16 @@ public class SceneTransition : MonoBehaviour
     {
         startMenu.SetActive(true);
         settingsMenu.SetActive(false);
+        aboutMenu.SetActive(false);
     }
     public void ShowSettingsMenu()
     {
         startMenu.SetActive(false);
         settingsMenu.SetActive(true);
+    }
+    public void ShowAboutMenu()
+    {
+        startMenu.SetActive(false);
+        aboutMenu.SetActive(true);
     }
 }
