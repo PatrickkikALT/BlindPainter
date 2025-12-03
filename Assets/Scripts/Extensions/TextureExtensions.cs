@@ -22,8 +22,7 @@ public struct AverageColorJob : IJob {
     double rSum = 0, gSum = 0, bSum = 0, aSum = 0;
     double totalAlpha = 0;
 
-    for (int i = 0; i < pixels.Length; i++) {
-      Color32 c = pixels[i];
+    foreach (var c in pixels) {
       double alpha = c.a / 255.0;
 
       rSum += c.r * alpha;
@@ -52,7 +51,9 @@ public static class TextureExtensions {
   public static Color GetColorFromPixelData(this Material mat) {
     if (!mat.mainTexture) return mat.color;
     if (mat.mainTexture is not Texture2D t2d) throw new TypeAccessException();
-
+    if (mat.shader.name == "Shader Graphs/Tri-Planar ShaderGraph") {
+      t2d = mat.GetTexture("_ColorMap") as Texture2D;
+    }
     Color32[] col = t2d.GetPixels32();
 
     NativeArray<Color32> pixels = new NativeArray<Color32>(col.Length, Allocator.TempJob);

@@ -47,9 +47,9 @@ public class SymbolColor : MonoBehaviour {
     float z = r * 0.0193f + g * 0.1192f + b * 0.9505f;
 
     //normalize for d65
-    x /= 0.95047f;
+    x /= 0.950489f;
     y /= 1.00000f;
-    z /= 1.08883f;
+    z /= 1.08884f;
 
     //xyz to LAB
     float fx = x > 0.008856f ? Mathf.Pow(x, 1f / 3f) : (7.787f * x + 16f / 116f);

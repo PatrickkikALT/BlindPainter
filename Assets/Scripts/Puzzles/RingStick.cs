@@ -23,6 +23,7 @@ public class RingStick : MonoBehaviour {
     StartCoroutine(LerpToPos(obj.transform, transform.position + _pair.key, 0.01f));
     obj.transform.rotation = Quaternion.identity;
     rings.Add(obj.GetComponent<Ring>());
+    
     Physics.IgnoreCollision(GetComponent<Collider>(), obj.GetComponent<Collider>(), true);
     if (rings.Count > 0) {
       var amount = rings.Count(r => r.color == typeNeeded);

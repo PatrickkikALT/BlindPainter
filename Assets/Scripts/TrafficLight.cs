@@ -35,14 +35,12 @@ public class TrafficLight : MonoBehaviour {
   }
 
   public void OnTriggerEnter(Collider other) {
-    print("Collision with " + other.name);
     if (other.TryGetComponent(out Car car)) {
       car.isAtStoplight = true;
     }
   }
 
   public void OnTriggerExit(Collider other) {
-    print("Collision with " + other.name + " stopped");
     if (other.TryGetComponent(out Car car)) {
       car.isAtStoplight = false;
       car.currentTrafficLight = this;

@@ -16,7 +16,6 @@ public class PuzzleManager : MonoBehaviour {
     stick.completed = true;
     foreach (var ring in stick.rings) {
       ring.rb.isKinematic = true;
-      ring.col.enabled = false;
     }
     if (_ringsCompleted >= 3) {
       print("won");
