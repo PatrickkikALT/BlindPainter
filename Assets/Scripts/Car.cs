@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Car : MonoBehaviour {
   [HideInInspector] public bool isAtStoplight;
@@ -27,5 +28,11 @@ public class Car : MonoBehaviour {
 
   private void GetNewLight() {
     currentTrafficLight = StoplightManager.Instance.GetNewStoplight(transform.position);
+  }
+
+  private void OnCollisionEnter(Collision collision) {
+    if (collision.gameObject.CompareTag("Player")) {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
   }
 }

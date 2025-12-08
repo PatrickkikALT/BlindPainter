@@ -751,14 +751,14 @@ MonoBehaviour:
   - {fileID: 8539227670001640548}
   - {fileID: -5901582635306253}
   - {fileID: -4603662951859827220}
-  m_renderMode: 1
+  m_renderMode: 0
   m_latencyOptimization: 1
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:
     m_List: 00000000
   m_depthSubmissionMode: 0
   m_spacewarpMotionVectorTextureFormat: 0
-  m_optimizeBufferDiscards: 0
+  m_optimizeBufferDiscards: 1
   m_symmetricProjection: 0
   m_optimizeMultiviewRenderRegions: 0
   m_multiviewRenderRegionsOptimizationMode: 0
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   - {fileID: 1548467516872089568}
   - {fileID: 1940785323570898695}
   - {fileID: 4312871930695646315}
-  m_renderMode: 1
+  m_renderMode: 0
   m_latencyOptimization: 0
   m_autoColorSubmissionMode: 1
   m_colorSubmissionModes:

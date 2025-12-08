@@ -1,17 +1,8 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public enum TrafficColor {
-  NONE = 0,
-  RED = 1,
-  ORANGE = 2,
-  GREEN = 3,
-}
-
-public class TrafficLight : MonoBehaviour {
+public class PedestrianLight : MonoBehaviour {
   public Renderer renderer;
   public Color currentColor;
   public bool running;
@@ -26,25 +17,12 @@ public class TrafficLight : MonoBehaviour {
 
   public IEnumerator LightPattern() {
     while (running) {
-      SetColor(TrafficColor.RED);
-      yield return new WaitForSeconds(red);
       SetColor(TrafficColor.GREEN);
+      yield return new WaitForSeconds(red);
+      SetColor(TrafficColor.RED);
       yield return new WaitForSeconds(green);
       SetColor(TrafficColor.ORANGE);
       yield return new WaitForSeconds(orange);
-    }
-  }
-
-  public void OnTriggerEnter(Collider other) {
-    if (other.TryGetComponent(out Car car)) {
-      car.isAtStoplight = true;
-    }
-  }
-
-  public void OnTriggerExit(Collider other) {
-    if (other.TryGetComponent(out Car car)) {
-      car.isAtStoplight = false;
-      car.currentTrafficLight = this;
     }
   }
 
@@ -60,4 +38,5 @@ public class TrafficLight : MonoBehaviour {
       renderer.materials[(int)item.key].SetColor("_BaseColor", Color.black);
     }
   }
+
 }

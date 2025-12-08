@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour {
   public SerializableDictionary<Puzzle, bool> dictionary = new();
-
+  [SerializeField] private ParticleSystem confetti;
   private int _ringsCompleted;
 
   public static PuzzleManager Instance;
@@ -19,8 +19,9 @@ public class PuzzleManager : MonoBehaviour {
     }
     if (_ringsCompleted >= 3) {
       print("won");
+      confetti.Play();
     }
-
+    
     return _ringsCompleted;
   }
 
