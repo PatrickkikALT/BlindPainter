@@ -343,6 +343,7 @@ Transform:
   - {fileID: 5666940698409441741}
   - {fileID: 1567044717089222968}
   - {fileID: 7461773306226999787}
+  - {fileID: 3073566243598067005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6595851778393633120
@@ -849,7 +850,7 @@ PrefabInstance:
     - target: {fileID: -2364848117899701864, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 1 (1)
@@ -1190,7 +1191,7 @@ PrefabInstance:
     - target: {fileID: -1483058981279926697, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 2
@@ -1679,7 +1680,7 @@ PrefabInstance:
     - target: {fileID: -2364848117899701864, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 1 (2)
@@ -1814,7 +1815,7 @@ PrefabInstance:
     - target: {fileID: -2364848117899701864, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 1 (3)
@@ -1894,6 +1895,76 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a28425a97664b8c4a84944f2f951b447, type: 3}
   m_PrefabInstance: {fileID: 3099146389577098949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3255321102929756886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5029172118571197331}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.95
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
+    - target: {fileID: 919132149155446097, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+      propertyPath: m_Name
+      value: CADD MAP Pillar
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+--- !u!4 &3073566243598067005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4280576bc6a589f41a417dab839d0440, type: 3}
+  m_PrefabInstance: {fileID: 3255321102929756886}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3282168339957625741
 PrefabInstance:
@@ -2211,7 +2282,7 @@ PrefabInstance:
     - target: {fileID: -1483058981279926697, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 2 (1)
@@ -3182,7 +3253,7 @@ PrefabInstance:
     - target: {fileID: -2364848117899701864, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: d9d2394ab89009b4b909cbb24e675b71, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 1
@@ -3318,7 +3389,7 @@ PrefabInstance:
     - target: {fileID: -1483058981279926697, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 2 (2)
@@ -3520,7 +3591,7 @@ PrefabInstance:
     - target: {fileID: -1483058981279926697, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d3d42da340dec95489bf6fd9c0d7d796, type: 2}
+      objectReference: {fileID: 2100000, guid: b1394c288886f82458d7b98f131eefb5, type: 2}
     - target: {fileID: 919132149155446097, guid: 197542a93d4d7dd4d85a06e2dac50b25, type: 3}
       propertyPath: m_Name
       value: CADD MAP RoofWall 2 (3)
