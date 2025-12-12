@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ColorBySymbol : MonoBehaviour {
   [SerializeField] private Color[] colors;
   [SerializeField] private List<PaintBucket> buckets;
   [SerializeField] private GameObject bucketPrefab;
   [SerializeField] private ParticleSystem confetti;
-  private SerializableDictionary<PaintSlot, bool> _completedSlots;
+  [SerializeField] private SerializableDictionary<PaintSlot, bool> completedSlots;
 
   private void Start() {
     foreach (var color in colors) {
@@ -20,9 +21,9 @@ public class ColorBySymbol : MonoBehaviour {
   }
 
   public void CompleteSlot(PaintSlot slot) {
-    _completedSlots.entries.Find(x => x.key == slot).value = true;
+    completedSlots.entries.Find(x => x.key == slot).value = true;
     
-    if (_completedSlots.entries.Count(x => x.value == true) == _completedSlots.entries.Count) {
+    if (completedSlots.entries.Count(x => x.value == true) == completedSlots.entries.Count) {
       Complete();
     }
   }
