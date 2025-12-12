@@ -4905,6 +4905,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Huiz
       objectReference: {fileID: 0}
+    - target: {fileID: 5917362420661217899, guid: bc93663c36705334eaa3bb507eee341f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7600518895448316230, guid: bc93663c36705334eaa3bb507eee341f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.97
