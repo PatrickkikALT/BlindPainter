@@ -1,10 +1,6 @@
 using System;
-using System.Runtime.CompilerServices;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using Unity.Mathematics;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public static class ExtensionMethods {
   //unity doesnt have an implicit cast from float3 to Vector4 for SetVector so had to make my own

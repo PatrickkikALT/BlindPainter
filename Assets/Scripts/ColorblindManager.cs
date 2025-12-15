@@ -19,7 +19,6 @@ public class ColorblindManager : MonoBehaviour {
   }
   public void Start() {
     var i = PlayerPrefs.GetInt("Colorblindness");
-    print(i);
     currentColorblindness = possibleColorblindness[i];
     SwitchColorblindness();
   }
