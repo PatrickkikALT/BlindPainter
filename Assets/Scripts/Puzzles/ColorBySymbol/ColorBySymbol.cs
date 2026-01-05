@@ -3,11 +3,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class ColorBySymbol : MonoBehaviour {
+public class ColorBySymbol : PuzzleBehaviour {
   [SerializeField] private Color[] colors;
   [SerializeField] private List<PaintBucket> buckets;
   [SerializeField] private GameObject bucketPrefab;
-  [SerializeField] private ParticleSystem confetti;
   [SerializeField] private SerializableDictionary<PaintSlot, bool> completedSlots;
 
   private void Start() {
@@ -23,13 +22,9 @@ public class ColorBySymbol : MonoBehaviour {
   public void CompleteSlot(PaintSlot slot) {
     completedSlots.entries.Find(x => x.key == slot).value = true;
     
-    if (completedSlots.entries.Count(x => x.value == true) == completedSlots.entries.Count) {
+    if (completedSlots.entries.Count(x => x.value) == completedSlots.entries.Count) {
       Complete();
     }
-  }
-  
-  private void Complete() {
-    confetti.Play();
   }
   
   private void OnDrawGizmos() {
@@ -38,7 +33,6 @@ public class ColorBySymbol : MonoBehaviour {
       var pos = GetPosition(i);
       Gizmos.color = colors[i];
       Gizmos.DrawCube(transform.position + pos, Vector3.one * 0.2f);
-      
     }
   }
 

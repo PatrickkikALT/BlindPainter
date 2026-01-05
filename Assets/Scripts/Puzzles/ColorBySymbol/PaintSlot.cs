@@ -14,11 +14,12 @@ public class PaintSlot : MonoBehaviour {
 
   private void OnCollisionEnter(Collision collision) {
     if (collision.gameObject.TryGetComponent(out Brush brush)) {
-      renderer.material.color = brush.currentBrushColor;
       if (brush.currentBrushColor == actualColor) {
-        _collider.enabled = false;
+        renderer.material.color = brush.currentBrushColor;
+        Physics.IgnoreCollision(_collider, collision.collider);
         GameManager.Instance.colorBySymbol.CompleteSlot(this);
       }
+      
     }
   }
 }

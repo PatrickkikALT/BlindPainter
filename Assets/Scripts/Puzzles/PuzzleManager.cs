@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PuzzleManager : MonoBehaviour {
-  public SerializableDictionary<Puzzle, bool> dictionary = new();
+  public SerializableDictionary<Puzzle, bool> puzzles = new();
   [SerializeField] private ParticleSystem confetti;
   private int _ringsCompleted;
 
