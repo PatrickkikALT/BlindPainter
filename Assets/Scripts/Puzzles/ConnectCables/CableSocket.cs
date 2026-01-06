@@ -1,20 +1,22 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
-public class CableSocket : MonoBehaviour {
+public class CableSocket : XRSocketInteractor {
+  [Header("Cable Settings")] 
   public string acceptedCableID;
   public bool isOccupied;
-
-  private void OnTriggerEnter(Collider other) {
+  
+  public void OnCableInserted(SelectEnterEventArgs args) {
     if (isOccupied) return;
-    
-    if (other.TryGetComponent(out CableEnd cable) && cable.cableID == acceptedCableID) {
-      ConnectCable(cable);
-    }
-  }
+    if (args.interactableObject.transform.TryGetComponent<CableEnd>(out var cable)) {
+      if (cable.cableID != acceptedCableID) return;
 
-  private void ConnectCable(CableEnd cable) {
-    isOccupied = true;
-    cable.LockToSocket(transform);
-    PuzzleManager.Instance.RegisterConnection();
+      cable.LockToSocket(attachTransform);
+      PuzzleManager.Instance.RegisterConnection();
+      isOccupied = true;
+    }
   }
 }

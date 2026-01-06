@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 public class ColorMatchValidator : MonoBehaviour {
-  public ColorCore core;
+  public ColorCore resultCore;
   public TargetColor target;
   public float tolerance = 0.05f;
   public ParticleSystem confetti;
 
   private void FixedUpdate() {
-    if (ColorsMatch(core.GetCurrentColor(), target.targetColor)) {
+    if (ColorsMatch(resultCore.GetCurrentColor(), target.targetColor)) {
       CompletePuzzle();
     }
   }
@@ -19,5 +20,6 @@ public class ColorMatchValidator : MonoBehaviour {
 
   private void CompletePuzzle() {
     confetti.Play();
+    target.StartNewTarget();
   }
 }
