@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df43a90499ab20946989558aec6818be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorMatchValidator
-  core: {fileID: 7471055239744448491}
+  resultCore: {fileID: 7471055239744448491}
   target: {fileID: 2921425862070138484}
   tolerance: 0.05
   confetti: {fileID: 1160128720404408753}

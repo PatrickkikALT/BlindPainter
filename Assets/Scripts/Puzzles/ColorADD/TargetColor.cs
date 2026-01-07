@@ -9,14 +9,12 @@ public class TargetColor : MonoBehaviour {
   }
 
   private Color GenerateRandomTarget() {
-    int[] twoColorMasks = { 3, 5, 6 }; // 3=011 (R+Y), 5=101 (R+B), 6=110 (Y+B)
-
-    int mask = twoColorMasks[Random.Range(0, twoColorMasks.Length)];
+    int mask = Random.Range(1, 7);
 
     targetColor = ColorUtility.ToRGB(
       (mask & (int)ColorAdd.Red) != 0,
       (mask & (int)ColorAdd.Yellow) != 0,
-      (mask & (int)ColorAdd.Blue) != 0 
+      (mask & (int)ColorAdd.Blue) != 0
     );
 
     crystalRenderer.material.color = targetColor;
