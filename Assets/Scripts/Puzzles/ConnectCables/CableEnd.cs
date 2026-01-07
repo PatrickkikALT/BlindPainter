@@ -9,7 +9,7 @@ public class CableEnd : XRGrabInteractable {
   public Transform cableRoot;
   public LineRenderer lineRenderer;
   
-  private bool _isConnected = false;
+  public bool isConnected;
   
   private void FixedUpdate() {
     UpdateCable();
@@ -21,12 +21,15 @@ public class CableEnd : XRGrabInteractable {
     lineRenderer.SetPosition(1, transform.position);
   } 
 
-  public void LockToSocket(Transform socket) {
-    _isConnected = true;
+  public void LockToSocket(Transform socket, bool correct) {
+    
     //allow interaction manager to cleanly deselect the interactable
     interactionManager.CancelInteractableSelection((IXRSelectInteractable)this);
     //disallow player from interacting with cable again if connected correctly
-    interactionLayers = InteractionLayerMask.GetMask("None");
+    if (correct) {
+      isConnected = true;
+      interactionLayers = InteractionLayerMask.GetMask("None");
+    }
     
     transform.SetParent(socket, worldPositionStays: false);
     transform.localPosition = Vector3.zero;

@@ -12,9 +12,10 @@ public class CableSocket : XRSocketInteractor {
   public void OnCableInserted(SelectEnterEventArgs args) {
     if (isOccupied) return;
     if (args.interactableObject.transform.TryGetComponent<CableEnd>(out var cable)) {
-      if (cable.cableID != acceptedCableID) return;
+      if (cable.isConnected) return;
+      bool correct = cable.cableID == acceptedCableID;
 
-      cable.LockToSocket(attachTransform);
+      cable.LockToSocket(attachTransform, correct);
       PuzzleManager.Instance.RegisterConnection();
       isOccupied = true;
     }
