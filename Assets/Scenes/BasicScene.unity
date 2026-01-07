@@ -213,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 50655186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -779,7 +779,7 @@ Transform:
   m_GameObject: {fileID: 218520808}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1170,7 +1170,7 @@ MonoBehaviour:
     entries: []
   ringConfetti: {fileID: 1556022982}
   cableConfetti: {fileID: 2074506046}
-  totalConnectionsRequired: 3
+  cablePuzzle: {fileID: 2074506048}
 --- !u!4 &365867394
 Transform:
   m_ObjectHideFlags: 0
@@ -2079,7 +2079,7 @@ Transform:
   m_GameObject: {fileID: 453429570}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2747,6 +2747,7 @@ MonoBehaviour:
   cableID: C
   cableRoot: {fileID: 1283160411}
   lineRenderer: {fileID: 903732714}
+  isConnected: 0
 --- !u!54 &620507030
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12863,7 +12864,7 @@ Transform:
   m_GameObject: {fileID: 1283160410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13638,6 +13639,7 @@ MonoBehaviour:
   cableID: B
   cableRoot: {fileID: 218520809}
   lineRenderer: {fileID: 67951740}
+  isConnected: 0
 --- !u!54 &1608872850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15125,6 +15127,7 @@ MonoBehaviour:
   cableID: A
   cableRoot: {fileID: 453429571}
   lineRenderer: {fileID: 438327136}
+  isConnected: 0
 --- !u!54 &1871429186
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15512,6 +15515,7 @@ GameObject:
   - component: {fileID: 2074506045}
   - component: {fileID: 2074506047}
   - component: {fileID: 2074506046}
+  - component: {fileID: 2074506048}
   m_Layer: 0
   m_Name: Cables
   m_TagString: Untagged
@@ -20397,6 +20401,32 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2074506048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074506044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 006bf5596fc1f1543a80964552dcfa67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  cableConfetti: {fileID: 2074506046}
+  totalConnectionsRequired: 3
+  sockets:
+  - {fileID: 594785765}
+  - {fileID: 244457902}
+  - {fileID: 1020924487}
+  cables:
+  - {fileID: 453429571}
+  - {fileID: 218520809}
+  - {fileID: 1283160411}
+  yPositions:
+  - 0
+  - 0.2
+  - 0.4
 --- !u!114 &2084600896 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1023628909615603057, guid: 7a9fd41f4d96c1f45bdcaa7e2f63e130, type: 3}

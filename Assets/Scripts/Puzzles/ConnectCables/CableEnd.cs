@@ -10,6 +10,7 @@ public class CableEnd : XRGrabInteractable {
   public LineRenderer lineRenderer;
   
   public bool isConnected;
+  private Vector3 _originalScale;
   
   private void FixedUpdate() {
     UpdateCable();
@@ -32,6 +33,7 @@ public class CableEnd : XRGrabInteractable {
     }
     
     transform.SetParent(socket, worldPositionStays: false);
+    transform.localScale = Vector3.one;
     transform.localPosition = Vector3.zero;
     transform.localRotation = Quaternion.identity;
   }

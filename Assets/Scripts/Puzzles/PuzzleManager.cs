@@ -7,9 +7,8 @@ public class PuzzleManager : MonoBehaviour {
   private int _ringsCompleted;
 
   public static PuzzleManager Instance;
+  public CablePuzzle cablePuzzle;
 
-  [Header("Cable Puzzle")] public int totalConnectionsRequired;
-  private int _currentConnections;
 
   public void Awake() {
     Instance = this;
@@ -33,15 +32,5 @@ public class PuzzleManager : MonoBehaviour {
   public void RemoveFinishedRing() => _ringsCompleted--;
 
 
-  public void RegisterConnection() {
-    _currentConnections++;
 
-    if (_currentConnections >= totalConnectionsRequired) {
-      CompletePuzzle();
-    }
-  }
-
-  private void CompletePuzzle() {
-    cableConfetti.Play();
-  }
 }

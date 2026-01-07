@@ -14,10 +14,9 @@ public class CableSocket : XRSocketInteractor {
     if (args.interactableObject.transform.TryGetComponent<CableEnd>(out var cable)) {
       if (cable.isConnected) return;
       bool correct = cable.cableID == acceptedCableID;
-
       cable.LockToSocket(attachTransform, correct);
       if (!correct) return; 
-      PuzzleManager.Instance.RegisterConnection();
+      PuzzleManager.Instance.cablePuzzle.RegisterConnection();
       isOccupied = true;
     }
   }
