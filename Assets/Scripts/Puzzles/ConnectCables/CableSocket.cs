@@ -16,6 +16,7 @@ public class CableSocket : XRSocketInteractor {
       bool correct = cable.cableID == acceptedCableID;
 
       cable.LockToSocket(attachTransform, correct);
+      if (!correct) return; 
       PuzzleManager.Instance.RegisterConnection();
       isOccupied = true;
     }
