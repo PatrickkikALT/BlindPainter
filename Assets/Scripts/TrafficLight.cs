@@ -15,6 +15,7 @@ public class TrafficLight : MonoBehaviour {
   public Renderer renderer;
   public Color currentColor;
   public bool running;
+  public int emission;
 
   private SerializableDictionary<TrafficColor, Color> _colorDict;
   [SerializeField] private float red, green, orange;
@@ -35,13 +36,13 @@ public class TrafficLight : MonoBehaviour {
     }
   }
 
-  public void OnTriggerEnter(Collider other) {
+  public virtual void OnTriggerEnter(Collider other) {
     if (other.TryGetComponent(out Car car)) {
       car.isAtStoplight = true;
     }
   }
 
-  public void OnTriggerExit(Collider other) {
+  public virtual void OnTriggerExit(Collider other) {
     if (other.TryGetComponent(out Car car)) {
       car.isAtStoplight = false;
       car.currentTrafficLight = this;
@@ -51,13 +52,17 @@ public class TrafficLight : MonoBehaviour {
   public void SetColor(TrafficColor trafficColor) {
     var color = _colorDict.entries[(int)trafficColor].value;
     
-    renderer.materials[(int)trafficColor].SetColor("_BaseColor", color);
+    var material = renderer.materials[(int)trafficColor];
+    material.SetColor("_BaseColor", color);
+    material.SetColor("_EmissionColor", color * emission);
     currentColor = color;
     
     //disable other ones
     var toTurnOff = _colorDict.entries.Where(x => x.value != color && _colorDict.entries.IndexOf(x) != 0);
     foreach (var item in toTurnOff) {
-      renderer.materials[(int)item.key].SetColor("_BaseColor", Color.black);
+      var mat2 = renderer.materials[(int)item.key];
+      mat2.SetColor("_BaseColor", _colorDict.entries[(int)TrafficColor.NONE].value);
+      mat2.SetColor("_EmissionColor", _colorDict.entries[(int)TrafficColor.NONE].value);
     }
   }
 }

@@ -1828,7 +1828,7 @@ MonoBehaviour:
   colorDict:
     entries:
     - key: 0
-      value: {r: 1, g: 1, b: 1, a: 1}
+      value: {r: 0, g: 0, b: 0, a: 1}
     - key: 1
       value: {r: 1, g: 0, b: 0, a: 1}
     - key: 2
@@ -11145,6 +11145,7 @@ MonoBehaviour:
   renderer: {fileID: 938056517}
   currentColor: {r: 0, g: 0, b: 0, a: 0}
   running: 1
+  emission: 5
   red: 10
   green: 8
   orange: 2
@@ -13316,6 +13317,7 @@ MonoBehaviour:
   renderer: {fileID: 1478386960}
   currentColor: {r: 0, g: 0, b: 0, a: 0}
   running: 1
+  emission: 5
   red: 10
   green: 8
   orange: 2
