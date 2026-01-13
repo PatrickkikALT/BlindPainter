@@ -688,6 +688,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (2)
@@ -750,6 +754,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (2)
@@ -878,6 +886,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (5)
@@ -1002,6 +1014,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam
@@ -2110,6 +2126,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (1)
@@ -2316,6 +2336,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (6)
@@ -2378,6 +2402,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (3)
@@ -2868,6 +2896,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam
@@ -3276,6 +3308,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (4)
@@ -3898,6 +3934,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2489686991493514213, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 767bb1b4b44431a4f8389439eb84a690, type: 2}
     - target: {fileID: 3103195812518038015, guid: 417c0a6d865e86f48a16f59d04586cb4, type: 3}
       propertyPath: m_Name
       value: CADD MAP Muur met raam (1)
