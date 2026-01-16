@@ -18,14 +18,14 @@ public class TrafficLight : MonoBehaviour {
   public int emission;
 
   private SerializableDictionary<TrafficColor, Color> _colorDict;
-  [SerializeField] private float red, green, orange;
+  [SerializeField] protected float red, green, orange;
   
   public void Start() {
     _colorDict = StoplightManager.Instance.colorDict;
     StartCoroutine(LightPattern());
   }
 
-  public IEnumerator LightPattern() {
+  public virtual IEnumerator LightPattern() {
     while (running) {
       SetColor(TrafficColor.RED);
       yield return new WaitForSeconds(red);

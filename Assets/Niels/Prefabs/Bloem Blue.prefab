@@ -61,7 +61,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: 2
+  m_ForceMeshLod: 4
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
@@ -132,17 +132,17 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 412351585966457745}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
-  m_Size: 1
+  m_LocalReferencePoint: {x: -0.011187121, y: 0.18042989, z: 0.03249803}
+  m_Size: 0.36085978
   m_FadeMode: 0
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.2973951
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4236603548126856245}
-  - screenRelativeHeight: 0.3
+  - screenRelativeHeight: 0.08873588
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3755373925893786260}
@@ -301,7 +301,7 @@ MeshRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: 1
+  m_ForceMeshLod: 2
   m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0

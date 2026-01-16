@@ -16,7 +16,11 @@ public class ColorCore : MonoBehaviour {
     UpdateColor();
   }
 
-  void UpdateColor() {
+  private void UpdateColor() {
+    if (_activeColors.Count == 0) {
+      coreRenderer.material.color = Color.white;
+      return;
+    }
     bool r = _activeColors.Contains(ColorAdd.Red);
     bool y = _activeColors.Contains(ColorAdd.Yellow);
     bool b = _activeColors.Contains(ColorAdd.Blue);

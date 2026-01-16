@@ -11,10 +11,15 @@ public class PuyoSpawner : MonoBehaviour {
 
   private void Start() {
     SpawnNextPair();
+    grid = GridManager.Instance;
   }
 
   private void SpawnNextPair() {
-    Vector3 spawnPos = grid.GridToWorld(spawnColumn, GridManager.Instance.height - 1);
+    Vector3 spawnPos = grid.GridToWorld(spawnColumn, grid.height - 1);
+    if (!grid.IsValid((int)spawnPos.x, (int)spawnPos.y)) {
+      print("failed");
+      return;
+    }
     spawnPos.y += spawnHeightOffset;
 
     GameObject pairObj = Instantiate(puyoPairPrefab, spawnPos, Quaternion.identity);

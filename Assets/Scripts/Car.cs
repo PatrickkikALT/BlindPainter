@@ -23,7 +23,7 @@ public class Car : MonoBehaviour {
       _currentSpeed = Mathf.Lerp(_currentSpeed, 0, (speed / 4) * Time.deltaTime);
       
     }
-    transform.Translate(transform.forward * (_currentSpeed * Time.fixedDeltaTime));
+    transform.Translate(Vector3.forward * (_currentSpeed * Time.fixedDeltaTime));
   }
 
   private void GetNewLight() {
