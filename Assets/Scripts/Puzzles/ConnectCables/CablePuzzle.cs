@@ -12,8 +12,6 @@ public class CablePuzzle : MonoBehaviour {
   private Queue<float> possibleYPositions;
   public AudioSource confettiAudio;
   private void Start() {
-    Vector3 basePosition = transform.position;
-
     // randomize sockets
     Queue<float> socketYPositions = new Queue<float>(yPositions);
     socketYPositions = socketYPositions.RandomizeQueue();

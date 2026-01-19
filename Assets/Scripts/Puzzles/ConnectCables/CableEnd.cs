@@ -17,7 +17,9 @@ public class CableEnd : XRGrabInteractable {
   public ParticleSystem lightningParticle;
   
   private void FixedUpdate() {
-    UpdateCable();
+    if (!isConnected) {
+      UpdateCable();
+    }
   }
 
   protected override void Grab() {
@@ -44,7 +46,6 @@ public class CableEnd : XRGrabInteractable {
   } 
 
   public void LockToSocket(Transform socket, bool correct) {
-    
     //allow interaction manager to cleanly deselect the interactable
     interactionManager.CancelInteractableSelection((IXRSelectInteractable)this);
     //disallow player from interacting with cable again if connected correctly
@@ -57,5 +58,6 @@ public class CableEnd : XRGrabInteractable {
     transform.localScale = Vector3.one;
     transform.localPosition = Vector3.zero;
     transform.localRotation = Quaternion.identity;
+    lineRenderer.SetPosition(1, socket.position);
   }
 }
