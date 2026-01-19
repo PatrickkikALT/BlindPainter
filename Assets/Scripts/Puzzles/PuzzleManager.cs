@@ -3,7 +3,7 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour {
   public SerializableDictionary<Puzzle, bool> puzzles = new();
   public ParticleSystem ringConfetti;
-  public ParticleSystem cableConfetti;
+  public AudioSource confettiAudio; 
   private int _ringsCompleted;
 
   public static PuzzleManager Instance;
@@ -24,6 +24,7 @@ public class PuzzleManager : MonoBehaviour {
     if (_ringsCompleted >= 3) {
       print("won");
       ringConfetti.Play();
+      confettiAudio.Play();
     }
 
     return _ringsCompleted;

@@ -8,6 +8,7 @@ public class ColorBySymbol : PuzzleBehaviour {
   [SerializeField] private List<PaintBucket> buckets;
   [SerializeField] private GameObject bucketPrefab;
   [SerializeField] private SerializableDictionary<PaintSlot, bool> completedSlots;
+  public AudioSource paintSound;
 
   private void Start() {
     foreach (var color in colors) {
@@ -21,7 +22,7 @@ public class ColorBySymbol : PuzzleBehaviour {
 
   public void CompleteSlot(PaintSlot slot) {
     completedSlots.entries.Find(x => x.key == slot).value = true;
-    
+    paintSound.Play();
     if (completedSlots.entries.Count(x => x.value) == completedSlots.entries.Count) {
       Complete();
     }
