@@ -11,7 +11,6 @@ public class CablePuzzle : MonoBehaviour {
   public float[] yPositions;
   private Queue<float> possibleYPositions;
   public AudioSource confettiAudio;
-
   private void Start() {
     Vector3 basePosition = transform.position;
 
@@ -31,7 +30,7 @@ public class CablePuzzle : MonoBehaviour {
 
   public void RegisterConnection() {
     _currentConnections++;
-
+    
     if (_currentConnections >= totalConnectionsRequired) {
       CompletePuzzle();
     }

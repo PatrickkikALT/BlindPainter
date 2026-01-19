@@ -11,11 +11,32 @@ public class CableEnd : XRGrabInteractable {
   
   public bool isConnected;
   private Vector3 _originalScale;
+
+  public AudioSource connectedAudio;
+  public AudioSource disconnectedAudio;
+  public ParticleSystem lightningParticle;
   
   private void FixedUpdate() {
     UpdateCable();
   }
 
+  protected override void Grab() {
+    disconnectedAudio.Play();
+    //we do need to check if it exists here since if the correct cable is inserted, the particle system gets destroyed to prevent
+    //the particles playing after winning for some reason?
+    if (lightningParticle) {
+      lightningParticle.Play();
+      lightningParticle.loop = true;
+    }
+  }
+
+  protected override void Drop() {
+    disconnectedAudio.Stop();
+    if (lightningParticle) {
+      lightningParticle.Stop();
+      lightningParticle.loop = false;
+    }
+  }
 
   private void UpdateCable() {
     lineRenderer.SetPosition(0, cableRoot.position);

@@ -15,7 +15,12 @@ public class CableSocket : XRSocketInteractor {
       if (cable.isConnected) return;
       bool correct = cable.cableID == acceptedCableID;
       cable.LockToSocket(attachTransform, correct);
+      cable.connectedAudio.Play();
       if (!correct) return; 
+      //destroy as fallback for if Drop() doesnt get called
+      //only if its correct
+      Destroy(cable.lightningParticle);
+      
       PuzzleManager.Instance.cablePuzzle.RegisterConnection();
       isOccupied = true;
     }
