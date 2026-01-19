@@ -7,6 +7,7 @@ public class ColorMatchValidator : MonoBehaviour {
   public TargetColor target;
   public float tolerance = 0.05f;
   public ParticleSystem confetti;
+  public AudioSource confettiAudio;
 
   private void FixedUpdate() {
     if (ColorsMatch(resultCore.GetCurrentColor(), target.targetColor)) {
@@ -19,6 +20,7 @@ public class ColorMatchValidator : MonoBehaviour {
   }
 
   private void CompletePuzzle() {
+    confettiAudio.Play();
     confetti.Play();
     target.StartNewTarget();
   }

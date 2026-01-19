@@ -10,6 +10,7 @@ public class CablePuzzle : MonoBehaviour {
   public Transform[] cables;
   public float[] yPositions;
   private Queue<float> possibleYPositions;
+  public AudioSource confettiAudio;
 
   private void Start() {
     Vector3 basePosition = transform.position;
@@ -36,7 +37,8 @@ public class CablePuzzle : MonoBehaviour {
     }
   }
 
-  private void CompletePuzzle() {
+  private void CompletePuzzle() { 
+    confettiAudio.Play();
     cableConfetti.Play();
   }
 }
