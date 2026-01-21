@@ -14,13 +14,13 @@ public class CablePuzzle : MonoBehaviour {
   private void Start() {
     // randomize sockets
     Queue<float> socketYPositions = new Queue<float>(yPositions);
-    socketYPositions = socketYPositions.RandomizeQueue();
+    socketYPositions = socketYPositions.ShuffleQueue();
     foreach (var socket in sockets) {
       socket.localPosition = Vector3.up * socketYPositions.Dequeue();
     }
     // randomize cables
     Queue<float> cableYPositions = new Queue<float>(yPositions);
-    cableYPositions = cableYPositions.RandomizeQueue();
+    cableYPositions = cableYPositions.ShuffleQueue();
     foreach (var cable in cables) {
       cable.localPosition = Vector3.up * cableYPositions.Dequeue();
     }

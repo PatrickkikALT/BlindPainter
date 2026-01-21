@@ -16,9 +16,9 @@ public static class ExtensionMethods {
     material.SetVector(name, v4);
   }
   /// <summary>
-  /// Returns index of specified object
+  /// Returns index of specified object in array
   /// </summary>
-  /// <param name="obj">Object to get index of.</param>
+  /// <param name="obj">Object to get index from.</param>
   /// <returns></returns>
   public static int GetIndex<T>(this T[] array, T obj) => Array.IndexOf(array, obj);
 
@@ -26,7 +26,7 @@ public static class ExtensionMethods {
   /// Shuffles queue's contents using the Fisher-Yates shuffle.
   /// <para>This method is O(n).</para>
   /// </summary>
-  public static Queue<T> RandomizeQueue<T>(this Queue<T> queue) {
+  public static Queue<T> ShuffleQueue<T>(this Queue<T> queue) {
     List<T> list = new List<T>(queue);
     
     //fisher-yates shuffle (O(n))

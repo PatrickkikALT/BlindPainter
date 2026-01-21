@@ -6,14 +6,18 @@ public class ColorCore : MonoBehaviour {
 
   private HashSet<ColorAdd> _activeColors = new();
 
+  public ColorMatchValidator matchValidator;
+
   public void AddColor(ColorAdd color) {
     _activeColors.Add(color);
     UpdateColor();
+    matchValidator.CheckColors();
   }
 
   public void RemoveColor(ColorAdd color) {
     _activeColors.Remove(color);
     UpdateColor();
+    matchValidator.CheckColors();
   }
 
   private void UpdateColor() {

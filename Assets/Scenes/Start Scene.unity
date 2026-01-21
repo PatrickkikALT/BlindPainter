@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.002
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -26,8 +26,8 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 05eb609ea66350e438ec05363799bfe4, type: 2}
-  m_HaloStrength: 0.5
+  m_SkyboxMaterial: {fileID: 2100000, guid: 3e5399bd195de7649b874f58c1b9f8a3, type: 2}
+  m_HaloStrength: 0.479
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 49775117}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -367,13 +367,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 49775115}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1575851, y: 0.7225228, z: 0.10404057, w: 0.66505885}
-  m_LocalPosition: {x: -55.800003, y: 116.3, z: 396.23}
+  m_LocalRotation: {x: 0.020884126, y: 0.946571, z: -0.316983, w: 0.05557872}
+  m_LocalPosition: {x: -15.8, y: 229.5, z: 421.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 3.398, y: 95.389, z: 21.515}
+  m_LocalEulerAnglesHint: {x: 37.043, y: 173.383, z: 0.309}
 --- !u!1 &56204075
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,6 +4375,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4487160505308981036, guid: f5462295697d04e488138d797b0a1b5f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.99800134
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487160505308981036, guid: f5462295697d04e488138d797b0a1b5f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487160505308981036, guid: f5462295697d04e488138d797b0a1b5f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.007999012
+      objectReference: {fileID: 0}
     - target: {fileID: 4580262072630243369, guid: f5462295697d04e488138d797b0a1b5f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1

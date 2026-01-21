@@ -8,11 +8,14 @@ public class ColorMatchValidator : MonoBehaviour {
   public float tolerance = 0.05f;
   public ParticleSystem confetti;
   public AudioSource confettiAudio;
+  public Door door;
 
-  private void FixedUpdate() {
+  public bool CheckColors() {
     if (ColorsMatch(resultCore.GetCurrentColor(), target.targetColor)) {
       CompletePuzzle();
     }
+
+    return true;
   }
 
   private bool ColorsMatch(Color coreColor, Color targetColor) {
@@ -20,6 +23,7 @@ public class ColorMatchValidator : MonoBehaviour {
   }
 
   private void CompletePuzzle() {
+    door.Open();
     confettiAudio.Play();
     confetti.Play();
     target.StartNewTarget();
