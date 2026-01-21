@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7607650261052884362}
   - component: {fileID: 8922369182669487446}
   - component: {fileID: 4674957604059533295}
+  - component: {fileID: 8772269213081641596}
   m_Layer: 0
   m_Name: Deur
   m_TagString: Untagged
@@ -90,6 +91,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8772269213081641596
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410668771630783240}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6218977487094332863, guid: 8b566a3ea103a3b41994ec9741dc8180, type: 3}
 --- !u!1 &7943366539183920084
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +302,7 @@ GameObject:
   - component: {fileID: 1359754897877595269}
   - component: {fileID: 9048212928696736493}
   - component: {fileID: 9197856487915399571}
+  - component: {fileID: 768037177571214323}
   m_Layer: 0
   m_Name: Muur met deur 1
   m_TagString: Untagged
@@ -359,3 +383,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &768037177571214323
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8143420317794605040}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5767576103473924876, guid: 8b566a3ea103a3b41994ec9741dc8180, type: 3}
