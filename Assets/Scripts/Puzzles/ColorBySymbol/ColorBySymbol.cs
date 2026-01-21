@@ -9,8 +9,7 @@ public class ColorBySymbol : PuzzleBehaviour {
   [SerializeField] private GameObject bucketPrefab;
   [SerializeField] private SerializableDictionary<PaintSlot, bool> completedSlots;
   public AudioSource paintSound;
-  public Door door;
-  private bool _hasSetColorblindness;
+
 
   private void Start() {
     foreach (var color in colors) {
@@ -27,12 +26,6 @@ public class ColorBySymbol : PuzzleBehaviour {
     paintSound.Play();
     if (completedSlots.entries.Count(x => x.value) == completedSlots.entries.Count) {
       Complete();
-      door.Open();
-      if (!_hasSetColorblindness) {
-        var colorblind = ColorblindManager.Instance.colorblindQueue.Dequeue();
-        ColorblindManager.Instance.SetColorblindness(colorblind);
-        _hasSetColorblindness = true;
-      }
     }
   }
   
