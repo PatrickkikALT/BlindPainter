@@ -1077,6 +1077,7 @@ MonoBehaviour:
     entries: []
   ringConfetti: {fileID: 1556022982}
   confettiAudio: {fileID: 365867395}
+  ringDoor: {fileID: 0}
   cablePuzzle: {fileID: 2074506048}
 --- !u!4 &365867394
 Transform:
@@ -16413,6 +16414,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 547454868443464144, guid: 98c9e52d72c8f4f4b9ed3f6795cee119, type: 3}
+      propertyPath: cellSize
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1830749028388032000, guid: 98c9e52d72c8f4f4b9ed3f6795cee119, type: 3}
       propertyPath: m_Name
       value: PuyoPuyo

@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorCore
   coreRenderer: {fileID: 2866231732820897910}
+  matchValidator: {fileID: 6079817559991427805}
 --- !u!1 &628520526016949061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1240,7 @@ MonoBehaviour:
   tolerance: 0.05
   confetti: {fileID: 1160128720404408753}
   confettiAudio: {fileID: 5932068916353083374}
+  door: {fileID: 0}
 --- !u!199 &7528850162876743349
 ParticleSystemRenderer:
   serializedVersion: 6

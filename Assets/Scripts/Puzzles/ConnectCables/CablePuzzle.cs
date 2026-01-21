@@ -11,6 +11,9 @@ public class CablePuzzle : MonoBehaviour {
   public float[] yPositions;
   private Queue<float> possibleYPositions;
   public AudioSource confettiAudio;
+  public Door door;
+
+  private bool _hasSetColorblindness;
   private void Start() {
     // randomize sockets
     Queue<float> socketYPositions = new Queue<float>(yPositions);
@@ -34,8 +37,15 @@ public class CablePuzzle : MonoBehaviour {
     }
   }
 
+  [ContextMenu("Complete")]
   private void CompletePuzzle() { 
     confettiAudio.Play();
     cableConfetti.Play();
+    door.Open();
+    if (!_hasSetColorblindness) {
+      var colorblind = ColorblindManager.Instance.colorblindQueue.Dequeue();
+      ColorblindManager.Instance.SetColorblindness(colorblind);
+      _hasSetColorblindness = true;
+    }
   }
 }

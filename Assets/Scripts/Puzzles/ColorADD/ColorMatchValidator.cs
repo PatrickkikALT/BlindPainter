@@ -10,6 +10,8 @@ public class ColorMatchValidator : MonoBehaviour {
   public AudioSource confettiAudio;
   public Door door;
 
+  private bool _hasSetColorblindness;
+
   public bool CheckColors() {
     if (ColorsMatch(resultCore.GetCurrentColor(), target.targetColor)) {
       CompletePuzzle();
@@ -21,9 +23,15 @@ public class ColorMatchValidator : MonoBehaviour {
   private bool ColorsMatch(Color coreColor, Color targetColor) {
     return Vector3.Distance(new Vector3(coreColor.r, coreColor.g, coreColor.b), new Vector3(targetColor.r, targetColor.g, targetColor.b)) < tolerance;
   }
-
+  
+  [ContextMenu("Complete")]
   private void CompletePuzzle() {
     door.Open();
+    if (!_hasSetColorblindness) {
+      var colorblind = ColorblindManager.Instance.colorblindQueue.Dequeue();
+      ColorblindManager.Instance.SetColorblindness(colorblind);
+      _hasSetColorblindness = true;
+    }
     confettiAudio.Play();
     confetti.Play();
     target.StartNewTarget();

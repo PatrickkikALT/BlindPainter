@@ -3,7 +3,9 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour {
   public SerializableDictionary<Puzzle, bool> puzzles = new();
   public ParticleSystem ringConfetti;
-  public AudioSource confettiAudio; 
+  public AudioSource confettiAudio;
+  public Door ringDoor;
+  private bool _ringSetColorblindness;
   private int _ringsCompleted;
 
   public static PuzzleManager Instance;
@@ -13,7 +15,7 @@ public class PuzzleManager : MonoBehaviour {
   public void Awake() {
     Instance = this;
   }
-
+  
   public int FinishRing(RingStick stick) {
     _ringsCompleted++;
     stick.completed = true;
@@ -22,9 +24,7 @@ public class PuzzleManager : MonoBehaviour {
     }
 
     if (_ringsCompleted >= 3) {
-      print("won");
-      ringConfetti.Play();
-      confettiAudio.Play();
+      Complete();
     }
 
     return _ringsCompleted;
@@ -32,6 +32,18 @@ public class PuzzleManager : MonoBehaviour {
 
   public void RemoveFinishedRing() => _ringsCompleted--;
 
+  [ContextMenu("Complete")]
+  public void Complete() {
+    ringConfetti.Play();
+    confettiAudio.Play();
+    ringDoor.Open();
+    if (!_ringSetColorblindness) {
+      var colorblind = ColorblindManager.Instance.colorblindQueue.Dequeue();
+      ColorblindManager.Instance.SetColorblindness(colorblind);
+      _ringSetColorblindness = true;
+    }
+    
+  }
 
 
 }

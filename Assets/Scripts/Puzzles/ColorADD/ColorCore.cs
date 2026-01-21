@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class ColorCore : MonoBehaviour {
   public Renderer coreRenderer;
-
   private HashSet<ColorAdd> _activeColors = new();
-
   public ColorMatchValidator matchValidator;
 
   public void AddColor(ColorAdd color) {

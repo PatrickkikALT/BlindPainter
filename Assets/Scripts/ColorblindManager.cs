@@ -13,13 +13,20 @@ public class ColorblindManager : MonoBehaviour {
   public Colorblind currentColorblindness;
   public Colorblind[] possibleColorblindness;
   public static ColorblindManager Instance;
+  public Queue<Colorblind> colorblindQueue = new Queue<Colorblind>();
+  public List<Colorblind> colorblindQueueList = new List<Colorblind>();
 
   private void Awake() {
     Instance = this;
   }
   public void Start() {
     var i = PlayerPrefs.GetInt("Colorblindness");
-    currentColorblindness = possibleColorblindness[i];
+    SetColorblindness(possibleColorblindness[i]);
+    colorblindQueue = new Queue<Colorblind>(colorblindQueueList);
+  }
+
+  public void SetColorblindness(Colorblind colorblind) {
+    currentColorblindness = colorblind;
     SwitchColorblindness();
   }
 
